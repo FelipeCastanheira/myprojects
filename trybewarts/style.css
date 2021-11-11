@@ -1,0 +1,107 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  background-color: rgb(50, 167, 145);
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+header img {
+  max-width: 5%;
+}
+
+header form {
+  margin: 0 5px;
+}
+
+.trybewarts-login {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.login-form input {
+  margin: 0 5px;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2%;
+}
+
+#evaluation-form {
+  display: flex;
+  width: 675px;
+  flex-direction: column;
+}
+
+#trybewarts-forms-logo {
+  height: 500px;
+}
+
+.subcontainer {
+  display: flex;
+  flex-direction: row;
+}
+
+#input-name , #input-lastname , #input-email , #house {
+  width: 50%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+#counter {
+  position: relative;
+  top: -20px;
+  left: 95%;
+  opacity: 60%;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+.display-none {
+  display: none;
+}
+
+.small-container {
+  width: 50%;
+}
+
+.large-container {
+  width: 50%;
+}
+
+.large-container label {
+  margin: 2px 0;
+}
+
+.small-large {
+  justify-content: space-between;
+}
+
+.small-container label {
+  margin: 2px 0;
+}
+
+.rate-container label {
+  margin: 0 2px;
+}
