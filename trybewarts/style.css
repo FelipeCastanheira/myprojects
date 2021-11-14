@@ -68,9 +68,10 @@ main {
 
 #counter {
   position: relative;
-  top: -20px;
-  left: 95%;
+  top: -1.5rem;
+  right: 0.5rem;
   opacity: 60%;
+  text-align: right !important;
 }
 
 footer {
