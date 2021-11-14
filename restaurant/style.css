@@ -28,7 +28,22 @@ header button {
   border-radius: 6px;
   background-color: #FFD6B5;
   border: none;
+  transition: 0.5s;
 }
+
+header button:hover {
+  background-color: #8FDDEB;
+  cursor: pointer;
+}
+
+.a-pay {
+  transition: 0.5s;
+}
+
+.a-pay:hover {
+  color: #8FDDEB;
+}
+
 header a {
   font-size: 35px;
   color: white;
@@ -122,9 +137,14 @@ section.menu {
   font-size: 20px;
 }
 
-.line h3 {
+.add {
   font-size: 32px;
   cursor: pointer;
+  transition: 0.5s;
+}
+
+.add:hover {
+  color: lime;
 }
 
 .price {
@@ -142,6 +162,6 @@ section.menu {
 .menu-btn:disabled {
   background-color: #FFD6B5;
   border: none;
-  color: black;
+  color: rgb(134, 130, 130);
   font-size: 21px;
 }
