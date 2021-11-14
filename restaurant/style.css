@@ -1,0 +1,147 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  /* background-color: black; */
+}
+
+header {
+  display: flex;
+  background-color: #41919E;
+  color: white;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+header button {
+  width: 160px;
+  height: 40px;
+  border-radius: 6px;
+  background-color: #FFD6B5;
+  border: none;
+}
+header a {
+  font-size: 35px;
+  color: white;
+}
+
+header button a {
+  font-size: 30px;
+  color: black;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+
+header h1 {
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+main {
+  margin-top: 60px;
+}
+
+section.menu {
+  background-image: url(images/rest-back.jpg);
+  height: 580px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu {
+  justify-content: space-around;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.menu h2 {
+  margin: 15px;
+  padding-top: 15px;
+  text-align: center;
+}
+
+.menu .sub-container {
+  background-color: #41919E;
+  height: 300px;
+  align-items: center;
+  padding: 5px 10px 55px;
+  border-radius: 5px;
+}
+
+.line {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  margin: auto 10px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.menu-btn {
+  width: 180px;
+  height: 50px;
+  border-radius: 6px;
+  background-color: #41919E;
+  border: none;
+  color: white;
+  align-self: center;
+  font-size: 25px;
+}
+
+.menu input {
+  background-color: #8FDDEB;
+  height: 23px;
+}
+
+.line p {
+  color: black;
+  font-size: 20px;
+}
+
+.line h3 {
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.price {
+  width: 40%;
+}
+
+.menu input:nth-child(even) {
+  width: 75%;
+}
+
+.menu input:nth-child(odd) {
+  width: 50%;
+}
+
+.menu-btn:disabled {
+  background-color: #FFD6B5;
+  border: none;
+  color: black;
+  font-size: 21px;
+}
