@@ -180,3 +180,22 @@ section.menu {
   width: 50%;
 }
 
+#order {
+  background: linear-gradient(45deg, #41919E, #8FDDEB, white, #8FDDEB);
+  height: 580px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#order h2 {
+  color: black;
+}
+
+.order-container {
+  background-color: #292c2c;
+  height: 350px;
+  width: 450px;
+  align-items: center;
+  padding: 5px 10px 55px;
+  border-radius: 5px;
+}
