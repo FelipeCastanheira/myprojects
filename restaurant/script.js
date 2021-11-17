@@ -6,6 +6,8 @@ const plus1 = document.querySelectorAll('.plus')[0];
 const plus2 = document.querySelectorAll('.plus')[1];
 const input1 = document.querySelector('input');
 const menuBtn = document.querySelector('.menu-btn');
+const orderArr = document.querySelectorAll('.order-container .display-none');
+const inputArray = document.querySelectorAll('input');
 
 // funções geradas no projeto JS-Unit-Tests
 const restaurant = {
@@ -80,3 +82,41 @@ addFood.addEventListener('click', () => {
 addDrink.addEventListener('click', () => {
   changeDrink();
 });
+
+const setMenu = () => {
+  const menuObject = {
+    food: {},
+    drink: {},
+  }
+  for (let i = 0; i < 28; i += 2) {
+    if (inputArray[i].value && i < 14) {
+      menuObject.food[inputArray[i].value] = inputArray[i+1].value;
+    } else if (inputArray[i].value) {
+      menuObject.drink[inputArray[i].value] = inputArray[i+1].value;
+    }
+  }
+  createMenu(menuObject);
+}
+
+const fillOrderSection = () => {
+  const fullObj = restaurant.fetchMenu();
+  const foodObj = fullObj.food;
+  const drinkObj = fullObj.drink;
+  for (let i = 0; i < Object.keys(foodObj).length; i += 1) {
+    orderArr[i].className = 'input-container';
+    const innerText = `${Object.keys(foodObj)[i]} R$${Object.values(foodObj)[i]}`;
+    orderArr[i].lastChild.innerText = innerText; 
+  }
+  const limit = Object.keys(drinkObj).length;
+  for (let i = 0; i < limit; i += 1) {
+    orderArr[7 + i].className = 'input-container';
+    const innerText = `${Object.keys(drinkObj)[i]} R$${Object.values(drinkObj)[i]}`;
+    orderArr[7 + i].lastChild.innerText = innerText; 
+  }
+}
+
+menuBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  setMenu();
+  fillOrderSection();
+})
