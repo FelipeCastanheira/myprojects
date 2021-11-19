@@ -118,6 +118,7 @@ section.menu {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  margin: 5px auto;
 }
 
 .menu-btn {
