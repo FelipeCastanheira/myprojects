@@ -15,10 +15,12 @@ const restaurant = {
   consumption: [],
 };
 
+// função que adiciona um pedido, alterando o array do consumo
 const addOrder = (myOrder) => {
   restaurant.consumption.push(myOrder);
 };
 
+// função que calcula a conta a pagar do cliente
 const sumKey = (menuKey) => {
   let actualSum = 0;
   for (let i = 0; i < restaurant.consumption.length; i += 1) {
@@ -30,6 +32,7 @@ const sumKey = (menuKey) => {
   return actualSum * 1.1;
 };
 
+// função principal
 const createMenu = (myMenu) => {
   restaurant.fetchMenu = () => myMenu;
   restaurant.order = addOrder;
