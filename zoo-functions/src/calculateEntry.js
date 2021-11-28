@@ -1,5 +1,6 @@
 const data = require('../data/zoo_data');
 
+// função auxiliar da countEntrants
 const ageClass = (age) => {
   if (age < 18) {
     return 'child';
@@ -10,6 +11,7 @@ const ageClass = (age) => {
   return 'senior';
 };
 
+// função que conta as pessoas que entram
 function countEntrants(entrants) {
   return entrants.reduce((acc, { age }) => {
     acc[ageClass(age)] += 1;
@@ -17,6 +19,7 @@ function countEntrants(entrants) {
   }, { adult: 0, child: 0, senior: 0 });
 }
 
+// função que verifica que foi passado um parâmetro válido
 const verifyEntr = (people) => {
   if (people) {
     if (people.length > 0) {
@@ -27,6 +30,7 @@ const verifyEntr = (people) => {
   return false;
 };
 
+// função principal
 function calculateEntry(entrants) {
   if (verifyEntr(entrants)) {
     const countObj = countEntrants(entrants);
