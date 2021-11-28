@@ -1,5 +1,6 @@
 const data = require('../data/zoo_data');
 
+// o parâmetro animal é um objeto que pode conter sex e specie.
 function countAnimals(animal) {
   if (animal) {
     if (animal.sex) {
