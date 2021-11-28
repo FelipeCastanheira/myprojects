@@ -1,9 +1,11 @@
 const data = require('../data/zoo_data');
 
+// função criada no primeiro requisito
 function getSpeciesByIds(...ids) {
   return data.species.filter((spec) => ids.includes(spec.id));
 }
 
+// função principal
 function getOldestFromFirstSpecies(theId) {
   const zooId = data.employees.find((person) => person.id === theId).responsibleFor;
   let result = ['', '', 0];

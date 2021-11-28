@@ -14,6 +14,7 @@ weekDays.forEach((day) => {
   fullSchedule[day] = { officeHour, exhibition };
 });
 
+// essa função recebe determinado dia da semana como parâmetro
 const daySchedule = (dayX) => {
   if (dayX === 'Monday') {
     return { Monday: { officeHour: 'CLOSED', exhibition: 'The zoo will be closed!' } };
@@ -27,6 +28,7 @@ const daySchedule = (dayX) => {
   return result;
 };
 
+// função principal
 function getSchedule(scheduleTarget) {
   if (weekDays.includes(scheduleTarget) || scheduleTarget === 'Monday') {
     return daySchedule(scheduleTarget);
